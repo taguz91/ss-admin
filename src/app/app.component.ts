@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ss-admin';
+
+  constructor(private router:Router){}
+
+  
+  vendedores(){
+    this.router.navigate(["vendedores"])
+  }
+
+ 
+
+  
 }

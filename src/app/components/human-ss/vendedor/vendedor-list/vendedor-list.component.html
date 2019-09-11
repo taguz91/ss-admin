@@ -1,1 +1,31 @@
-<p>vendedor-list works!</p>
+<div class="container">
+
+    <div class="card">
+        <div class="card header">
+            <h3>Vendedores</h3>
+            <div class="card-body">
+                <table class=" table table-hover">
+                    <thead>
+                        <tr class="text-center">
+                            <th>ID</th>
+                            <th>NICK</th>
+                            <th>MAX PRODUCTOS</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let vendedor of vendedores" class="text-center">
+                            <td>{{vendedor.id_usuario}}</td>
+                            <td>{{vendedor.user_nick}}</td>
+                            <td>{{vendedor.vend_max_productos}}</td>
+                            <td>
+                                <button class="btn btn-primary">Actualizar</button>
+                                <button class="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,10 @@ import { VendedorListComponent } from './components/human-ss/vendedor/vendedor-l
 import { AdminComponent } from './components/admin-ss/admin/admin/admin.component';
 import { AdminFormComponent } from './components/admin-ss/admin/admin-form/admin-form.component';
 import { AdminListComponent } from './components/admin-ss/admin/admin-list/admin-list.component';
+import {FormsModule} from '@angular/forms';
+import { VendedorService } from './services/human-ss/vendedor/vendedor.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +22,18 @@ import { AdminListComponent } from './components/admin-ss/admin/admin-list/admin
     VendedorListComponent,
     AdminComponent,
     AdminFormComponent,
-    AdminListComponent
+    AdminListComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    VendedorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
