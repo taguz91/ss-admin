@@ -1,8 +1,10 @@
-export interface Persona{
+export class Persona{
 
     id_persona:number;
 
     per_identificacion:string;
+
+    per_primer_nombre:string;
 
     per_segundo_nombre:string;
 
@@ -15,5 +17,7 @@ export interface Persona{
     per_sexo:string;
 
     per_fecha_registro:Date;
+
+
 
 }

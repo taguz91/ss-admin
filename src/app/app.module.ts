@@ -9,7 +9,7 @@ import { VendedorListComponent } from './components/human-ss/vendedor/vendedor-l
 import { AdminComponent } from './components/admin-ss/admin/admin/admin.component';
 import { AdminFormComponent } from './components/admin-ss/admin/admin-form/admin-form.component';
 import { AdminListComponent } from './components/admin-ss/admin/admin-list/admin-list.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { VendedorService } from './services/human-ss/vendedor/vendedor.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -23,6 +23,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AdminComponent,
     AdminFormComponent,
     AdminListComponent,
+    
 
   ],
   imports: [

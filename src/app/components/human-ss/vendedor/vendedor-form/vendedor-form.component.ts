@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup,Validators} from '@angular/forms'
+import { Router } from '@angular/router';
+import { VendedorService } from '../../../../services/human-ss/vendedor/vendedor.service';
+import { Vendedor } from '../../../../models/human-ss/vendedor';
+
 
 @Component({
   selector: 'app-vendedor-form',
@@ -8,9 +11,35 @@ import {FormBuilder,FormGroup,Validators} from '@angular/forms'
 })
 export class VendedorFormComponent implements OnInit {
 
-  constructor() { }
+  vendedor:Vendedor={
+    id_usuario: 0,
+    persona: {
+      id_persona: 0,
+      per_correo: '',
+      per_identificacion: '',
+      per_primer_apellido: '',
+      per_primer_nombre: '',
+      per_segundo_apellido: '',
+      per_segundo_nombre: '',
+      per_sexo: ''
+    
+    },
+    user_nick: '',
+    user_pass: '',
+    vend_max_productos: 0
+  };
+
+  constructor(private router:Router, private service:VendedorService) { }
 
   ngOnInit() {
   }
 
+  guardar(){
+    console.log(this.vendedor);
+      this.service.insertVendedor(this.vendedor)
+      .subscribe(data=>{
+        alert("Se agrego exitosamente");
+        this.router.navigate(["vendedores/listar"]);
+      })
+  }
 }

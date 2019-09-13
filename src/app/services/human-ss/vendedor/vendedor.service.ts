@@ -16,5 +16,9 @@ export class VendedorService {
       return this.http.get<Vendedor[]>(this.Url);
      
     }
+    insertVendedor(vendedor:Vendedor){
+      return this.http.post<Vendedor>(this.Url+"/insertar", vendedor);
+     
+    }
   
 }
