@@ -38,7 +38,7 @@ export class VendedorFormComponent implements OnInit {
     console.log(this.vendedor);
       this.service.insertVendedor(this.vendedor)
       .subscribe(data=>{
-        alert("Se agrego exitosamente");
+        alert("Se agregó exitosamente");
         this.router.navigate(["vendedores/listar"]);
       })
   }

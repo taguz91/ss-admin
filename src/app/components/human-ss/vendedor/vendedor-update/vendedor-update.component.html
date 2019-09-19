@@ -1,14 +1,15 @@
-<form class="needs-validation" novalidate>
+<form class="was-validated">
     <div class="form-row" style="margin-top: 50px">
         <div class="col-md-5"></div>
         <div class="col-md-2 mb-3">
-            <h3>Ingreso de Vendedor</h3>
+            <h3>Datos del Vendedor</h3>
             <br>
             <label for="identificacionPersona">Identificacion:</label>
             <input [(ngModel)]="vendedor.persona.per_identificacion" name="per_identificacion" type="text" class="form-control" id="identifiacionPersona" placeholder="Identificacion" required>
             <div class="valid-feedback">
                 Identificacion válida.
             </div>
+
         </div>
         <div class="col-md-5"></div>
         <div class="col-md-5"></div>
@@ -108,6 +109,6 @@
     </div>
     <div class="form-row">
         <div class="col-md-5"></div>
-        <button (click)="guardar()" class="btn btn-primary btn-sm" type="submit" style="margin-left: 20px; height: 40px; width: 300px; font-size: 15px">REGISTRAR</button>
+        <button (click)="actualizar(vendedor)" class="btn btn-primary btn-sm" type="submit" style="margin-left: 20px; height: 40px; width: 300px; font-size: 15px">REGISTRAR</button>
     </div>
 </form>

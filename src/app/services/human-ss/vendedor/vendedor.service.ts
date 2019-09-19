@@ -20,5 +20,15 @@ export class VendedorService {
       return this.http.post<Vendedor>(this.Url+"/insertar", vendedor);
      
     }
+
+    getVendedoresId(id_vendedor:number){
+      return this.http.get<Vendedor[]>(this.Url+"/"+id_vendedor);
+     
+    }
+
+    updateVendedor(vendedor:Vendedor){
+      return this.http.put<Vendedor>(this.Url+"/actualizar/"+vendedor.id_usuario, vendedor);
+     
+    }
   
 }

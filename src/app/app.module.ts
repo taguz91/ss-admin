@@ -12,6 +12,7 @@ import { AdminListComponent } from './components/admin-ss/admin/admin-list/admin
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { VendedorService } from './services/human-ss/vendedor/vendedor.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor-update/vendedor-update.component';
 
 
 @NgModule({
@@ -23,6 +24,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AdminComponent,
     AdminFormComponent,
     AdminListComponent,
+    VendedorUpdateComponent,
+
     
 
   ],

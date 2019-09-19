@@ -10,14 +10,7 @@ export class VendedorComponent implements OnInit {
 
   constructor(private router:Router){}
 
-  listar(){
-    this.router.navigate(["vendedores/listar"])
-  }
-
-  insertar(){
-    this.router.navigate(["vendedores/insertar"])
-  }
-
+  
 
   ngOnInit() {
     

@@ -16,6 +16,15 @@ export class AppComponent {
     this.router.navigate(["vendedores"])
   }
 
+  listar(){
+    this.router.navigate(["vendedores/listar"])
+  }
+
+  insertar(){
+    this.router.navigate(["vendedores/insertar"])
+  }
+
+
  
 
   
