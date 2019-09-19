@@ -1,5 +1,5 @@
 import { Persona } from './persona';
-export class Usuario{
+export interface Usuario{
 
     id_usuario:number;
 

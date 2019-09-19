@@ -1,4 +1,4 @@
-export class Persona{
+export interface Persona{
 
     id_persona:number;
 
@@ -16,7 +16,7 @@ export class Persona{
 
     per_sexo:string;
 
-    per_fecha_registro:Date;
+    per_fecha_registro?:Date;
 
 
 

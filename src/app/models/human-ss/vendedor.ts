@@ -1,6 +1,6 @@
 import { Persona } from './persona';
 import { Usuario } from './usuario';
-export class Vendedor extends Usuario  {
+export interface Vendedor extends Usuario  {
 
 
    

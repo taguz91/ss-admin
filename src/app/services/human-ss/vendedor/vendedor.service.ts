@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Vendedor } from '../../../models/human-ss/vendedor';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -21,8 +22,8 @@ export class VendedorService {
      
     }
 
-    getVendedoresId(id_vendedor:number){
-      return this.http.get<Vendedor[]>(this.Url+"/"+id_vendedor);
+    getVendedoresId(id_vendedor:number) {
+      return this.http.get<Vendedor>(this.Url+"/"+id_vendedor);
      
     }
 
