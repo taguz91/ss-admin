@@ -13,6 +13,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { VendedorService } from './services/human-ss/vendedor/vendedor.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor-update/vendedor-update.component';
+import { UnidadFormComponent } from './components/producto-ss/unidad/unidad-form/unidad-form.component';
+import { MarcaFormComponent } from './components/producto-ss/marca/marca-form/marca-form.component';
+import { LineaFormComponent } from './components/producto-ss/lineas/linea-form/linea-form.component';
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor
     AdminFormComponent,
     AdminListComponent,
     VendedorUpdateComponent,
+    UnidadFormComponent,
+    MarcaFormComponent,
+    LineaFormComponent,
 
     
 
