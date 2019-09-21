@@ -12,22 +12,23 @@ import { TipoIdentificacion } from '../../../../models/human-ss/tipoIdentificaci
 export class VendedorUpdateComponent implements OnInit {
   
   vendedor:Vendedor={
-    id_usuario: 0,
-    persona: {
-      id_persona: 0,
-      per_correo: '',
-      per_identificacion: '',
-      per_primer_apellido: '',
-      per_primer_nombre: '',
-      per_segundo_apellido: '',
-      per_segundo_nombre: '',
-      per_sexo: '',
-      tipoIdentificacion: {
-        id_tipo_identificacion: 0
-      }
+    id_persona: 0,
+
+    per_correo: '',
+    per_identificacion: '',
+    per_primer_apellido: '',
+    per_primer_nombre: '',
+    per_segundo_apellido: '',
+    per_segundo_nombre: '',
+    per_sexo: '',
+    tipoIdentificacion: {
+      id_tipo_identificacion: 0
     },
-    user_nick: '',
-    user_pass: '',
+    usuario: {
+      id_usuario: 0,
+      user_nick: '',
+      user_pass: ''
+    },
     vend_max_productos: 0
   };
   

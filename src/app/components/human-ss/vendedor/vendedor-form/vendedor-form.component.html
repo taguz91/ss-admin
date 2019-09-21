@@ -5,7 +5,7 @@
             <h3>Ingreso de Vendedor</h3>
             <br>
             <label for="identificacionPersona">Identificacion:</label>
-            <input [(ngModel)]="vendedor.persona.per_identificacion" name="per_identificacion" type="text" class="form-control" id="identifiacionPersona" placeholder="Identificacion" required>
+            <input [(ngModel)]="vendedor.per_identificacion" name="per_identificacion" type="text" class="form-control" id="identifiacionPersona" placeholder="Identificacion" required>
             <div class="valid-feedback">
                 Identificacion válida.
             </div>
@@ -14,7 +14,7 @@
         <div class="col-md-5"></div>
         <div class="col-md-2 mb-3">
             <label for="primerNombrePersona">Primer Nombre:</label>
-            <input [(ngModel)]="vendedor.persona.per_primer_nombre" name="per_primer_nombre" type="text" class="form-control" id="primerNombrePersona" placeholder="Primer Nombre" required>
+            <input [(ngModel)]="vendedor.per_primer_nombre" name="per_primer_nombre" type="text" class="form-control" id="primerNombrePersona" placeholder="Primer Nombre" required>
             <div class="valid-feedback">
                 Primer nombre válido.
             </div>
@@ -23,7 +23,7 @@
         <div class="col-md-5"></div>
         <div class="col-md-2 mb-3">
             <label for="segundoNombrePersona">Segundo Nombre:</label>
-            <input [(ngModel)]="vendedor.persona.per_segundo_nombre" name="per_segundo_nombre" type="text" class="form-control" id="segundoNombrePersona" placeholder="Segundo Nombre">
+            <input [(ngModel)]="vendedor.per_segundo_nombre" name="per_segundo_nombre" type="text" class="form-control" id="segundoNombrePersona" placeholder="Segundo Nombre">
             <div class="valid-feedback">
                 Segundo nombre válido.
             </div>
@@ -32,7 +32,7 @@
         <div class="col-md-5"></div>
         <div class="col-md-2 mb-3">
             <label for="primerApellidoPersona">Primer Apellido:</label>
-            <input [(ngModel)]="vendedor.persona.per_primer_apellido" name="per_primer_apellido" type="text" class="form-control" id="primerApellidoPersona" placeholder="Primer Apellido" required>
+            <input [(ngModel)]="vendedor.per_primer_apellido" name="per_primer_apellido" type="text" class="form-control" id="primerApellidoPersona" placeholder="Primer Apellido" required>
             <div class="valid-feedback">
                 Primer apellido válido.
             </div>
@@ -41,7 +41,7 @@
         <div class="col-md-5"></div>
         <div class="col-md-2 mb-3">
             <label for="segundoApellidoPersona">Segundo Apellido:</label>
-            <input [(ngModel)]="vendedor.persona.per_segundo_apellido" name="per_segundo_apellido" type="text" class="form-control" id="segundoApellidoPersona" placeholder="Segundo Apellido">
+            <input [(ngModel)]="vendedor.per_segundo_apellido" name="per_segundo_apellido" type="text" class="form-control" id="segundoApellidoPersona" placeholder="Segundo Apellido">
             <div class="valid-feedback">
                 Segundo apellido válido.
             </div>
@@ -50,7 +50,7 @@
         <div class="col-md-5"></div>
         <div class="col-md-2 mb-3">
             <label for="emailPersona">Correo electrónico:</label>
-            <input [(ngModel)]="vendedor.persona.per_correo" name="per_correo" type="email" class="form-control" id="emailPersona" aria-describedby="emailAyuda" placeholder="E-mail" required>
+            <input [(ngModel)]="vendedor.per_correo" name="per_correo" type="email" class="form-control" id="emailPersona" aria-describedby="emailAyuda" placeholder="E-mail" required>
             <small id="emailAyuda" class="form-text text-muted"></small>
         </div>
 
@@ -64,11 +64,11 @@
             <label for="sexosPersona">Sexo:</label>
             <div class="col-md-5"></div>
             <div class="custom-control custom-radio custom-control-inline" style="margin-left: 100px">
-                <input [(ngModel)]="vendedor.persona.per_sexo" name="per_sexo" type="radio" class="custom-control-input" id="sexoFemenino" value="Femenino">
+                <input [(ngModel)]="vendedor.per_sexo" name="per_sexo" type="radio" class="custom-control-input" id="sexoFemenino" value="Femenino">
                 <label class="radio-inline custom-control-label" for="sexoFemenino">Femenino</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-                <input [(ngModel)]="vendedor.persona.per_sexo" name="per_sexo" type="radio" class="custom-control-input" id="sexoMasculino" value="Masculino">
+                <input [(ngModel)]="vendedor.per_sexo" name="per_sexo" type="radio" class="custom-control-input" id="sexoMasculino" value="Masculino">
                 <label class=" radio-inline custom-control-label" for="sexoMasculino">Masculino</label>
             </div>
         </div>
@@ -81,7 +81,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="formatoUsuarioPersona">@</span>
                 </div>
-                <input [(ngModel)]="vendedor.user_nick" name="user_nick" type="text" class="form-control" id="nickUsuarioPersona" placeholder="nickname" aria-describedby="formatoUsuarioPersona" required>
+                <input [(ngModel)]="vendedor.usuario.user_nick" name="user_nick" type="text" class="form-control" id="nickUsuarioPersona" placeholder="nickname" aria-describedby="formatoUsuarioPersona" required>
                 <div class="invalid-feedback">
                     Por favor ingrese un nombre de usuario válido!
                 </div>
@@ -92,7 +92,7 @@
         <div class="col-md-2 mb-3">
             <div class="form-group">
                 <label for="contrasenaUsuarioPersona">Contraseña:</label>
-                <input [(ngModel)]="vendedor.user_pass" name="user_pass" type="password" class="form-control" id="contrasenaUsuarioPersona" placeholder="Contraseña">
+                <input [(ngModel)]="vendedor.usuario.user_pass" name="user_pass" type="password" class="form-control" id="contrasenaUsuarioPersona" placeholder="Contraseña">
             </div>
         </div>
 

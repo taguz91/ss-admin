@@ -1,9 +1,12 @@
 import { TipoIdentificacion } from './tipoIdentificacion';
-export interface Persona {
+import { Usuario } from './usuario';
+export abstract class Persona {
 
     id_persona:number;
 
     per_identificacion:string;
+
+    usuario:Usuario;
 
     tipoIdentificacion:TipoIdentificacion;
 
