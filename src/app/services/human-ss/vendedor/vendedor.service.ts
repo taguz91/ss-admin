@@ -18,7 +18,7 @@ export class VendedorService {
      
     }
     insertVendedor(vendedor:Vendedor){
-      return this.http.post<Vendedor>(this.Url+"/insertar", vendedor);
+      return this.http.post<Vendedor>(this.Url+"/guardar", vendedor);
      
     }
 
@@ -28,7 +28,7 @@ export class VendedorService {
     }
 
     updateVendedor(vendedor:Vendedor){
-      return this.http.put<Vendedor>(this.Url+"/actualizar/"+vendedor.id_usuario, vendedor);
+      return this.http.put<Vendedor>(this.Url+"/editar/"+vendedor.id_usuario, vendedor);
      
     }
   

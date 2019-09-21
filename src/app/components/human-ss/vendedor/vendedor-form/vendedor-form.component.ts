@@ -21,8 +21,10 @@ export class VendedorFormComponent implements OnInit {
       per_primer_nombre: '',
       per_segundo_apellido: '',
       per_segundo_nombre: '',
-      per_sexo: ''
-    
+      per_sexo: '',
+      tipoIdentificacion: {
+        id_tipo_identificacion: 0
+      }
     },
     user_nick: '',
     user_pass: '',

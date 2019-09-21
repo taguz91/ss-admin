@@ -1,5 +1,5 @@
 import { Persona } from './persona';
-export interface Usuario{
+export abstract class Usuario{
 
     id_usuario:number;
 
@@ -9,4 +9,5 @@ export interface Usuario{
 
     user_pass:string;
 
+    user_activo?:boolean;
 }

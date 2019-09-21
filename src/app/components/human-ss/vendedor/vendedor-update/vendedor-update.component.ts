@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VendedorService } from '../../../../services/human-ss/vendedor/vendedor.service';
 import { Vendedor } from 'src/app/models/human-ss/vendedor';
+import { TipoIdentificacion } from '../../../../models/human-ss/tipoIdentificacion';
 
 @Component({
   selector: 'app-vendedor-update',
@@ -20,8 +21,10 @@ export class VendedorUpdateComponent implements OnInit {
       per_primer_nombre: '',
       per_segundo_apellido: '',
       per_segundo_nombre: '',
-      per_sexo: ''
-    
+      per_sexo: '',
+      tipoIdentificacion: {
+        id_tipo_identificacion: 0
+      }
     },
     user_nick: '',
     user_pass: '',
