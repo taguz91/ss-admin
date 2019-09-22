@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Unidad } from 'src/app/models/producto-ss/unidad';
+import { UnidadService } from 'src/app/services/producto-ss/unidad/unidad.service';
 
 @Component({
   selector: 'app-unidad-form',
@@ -8,10 +10,30 @@ import { Component, OnInit } from '@angular/core';
 export class UnidadFormComponent implements OnInit {
 
   mostrar = false;
+  unidades: Unidad[];
+  unidad: Unidad = {
+    unid_nombre: null,
+    unid_codigo: null,
+    unid_activo: true
+  };
 
-  constructor() { }
+  constructor( private unidadService: UnidadService ) { }
 
   ngOnInit() {
+    this.unidadService.getAllUnidades().subscribe(
+      data => {
+        this.unidades = data;
+      }
+    );
+  }
+
+  guardarUnidad(){
+    console.log(this.unidad);
+    this.unidadService.saveUnidad(this.unidad).subscribe(
+      data =>{
+        alert("Se guardó correctamente");
+      }
+    )
   }
 
 }

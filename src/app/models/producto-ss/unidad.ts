@@ -1,7 +1,7 @@
  export interface Unidad{
 
-    id_unidad: number,
+    id_unidad?: number,
     unid_nombre: string,
     unid_codigo: string,
-    unid_activo: boolean,
+    unid_activo: boolean
  }

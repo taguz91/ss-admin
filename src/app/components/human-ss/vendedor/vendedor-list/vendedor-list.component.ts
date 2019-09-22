@@ -20,7 +20,6 @@ export class VendedorListComponent implements OnInit {
       this.vendedores=data;
       
     })
-
     
   }
 
