@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarcaService } from '../../../../services/producto-ss/marca/marca.service';
 
 @Component({
   selector: 'app-marca-form',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarcaFormComponent implements OnInit {
 
-  constructor() { }
+  constructor( private marcaservicio: MarcaService) { 
+    
+
+  }
 
   ngOnInit() {
   }
