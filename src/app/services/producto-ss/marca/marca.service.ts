@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Marca } from 'src/app/models/producto-ss/marca';
+import { Marca} from 'src/app/models/producto-ss/marca';
+
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,6 @@ export class MarcaService {
   getMarcaById( idMarca:number ){
     
   }
+
 
 }
