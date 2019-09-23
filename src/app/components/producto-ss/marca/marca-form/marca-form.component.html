@@ -15,12 +15,12 @@
     
                         <div class="col-md-6 form-group">
                             <label for="nombreUnidad">Nombre de Marca</label>
-                            <input type="text" class="form-control" name="nombreUnidad" id="nombreUnidad">
+                            <input [(ngModel)]="marca.marc_nombre" type="text" class="form-control" name="nombreUnidad" id="nombreUnidad">
                         </div>
     
                         <div class="col-md-6 form-group">
                             <label for="codigoUnidad">Código de Marca</label>
-                            <input type="text" class="form-control" name="codigoUnidad" id="codigoUnidad">
+                            <input [(ngModel)]="marca.marc_codigo" type="text" class="form-control" name="codigoUnidad" id="codigoUnidad">
                         </div>
     
                     </div>
@@ -28,7 +28,7 @@
                     <div class="form-row">
     
                         <div class="col-md-4 offset-md-5">
-                            <button type="submit" class="btn btn-dark">Guardar Marca</button>
+                            <button (click)="guardarMarca()" type="submit" class="btn btn-dark">Guardar Marca</button>
                         </div>
     
                     </div>
