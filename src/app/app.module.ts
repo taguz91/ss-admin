@@ -11,8 +11,11 @@ import { AdminFormComponent } from './components/admin-ss/admin/admin-form/admin
 import { AdminListComponent } from './components/admin-ss/admin/admin-list/admin-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { VendedorService } from './services/human-ss/vendedor/vendedor.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {HttpClientModule } from '@angular/common/http';
 import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor-update/vendedor-update.component';
+import { TipoIdentificacionService } from './services/human-ss/tipoIdentificacion/tipo_identificacion.service';
+import { VendedorDeleteComponent } from './components/human-ss/vendedor-delete/vendedor-delete.component';
+
 
 
 @NgModule({
@@ -25,6 +28,7 @@ import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor
     AdminFormComponent,
     AdminListComponent,
     VendedorUpdateComponent,
+    VendedorDeleteComponent,
 
     
 
@@ -33,10 +37,12 @@ import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'})
   ],
   providers: [
-    VendedorService
+    VendedorService, 
+    TipoIdentificacionService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Vendedor } from '../../../models/human-ss/vendedor';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -17,8 +16,9 @@ export class VendedorService {
       return this.http.get<Vendedor[]>(this.Url);
      
     }
+
     insertVendedor(vendedor:Vendedor){
-      return this.http.post<Vendedor>(this.Url+"guardar", vendedor);
+      return this.http.post<Vendedor>(this.Url+"guardar/", vendedor);
      
     }
 
@@ -31,5 +31,12 @@ export class VendedorService {
       return this.http.put<Vendedor>(this.Url+"editar/"+vendedor.id_persona, vendedor);
      
     }
+
+    deleteVendedor(vendedor:Vendedor){
+      return this.http.put<Vendedor>(this.Url+"eliminar/"+vendedor.id_persona, vendedor);
+     
+    }
+
+    
   
 }

@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { VendedorService } from '../../../../services/human-ss/vendedor/vendedor.service';
-import { Vendedor } from 'src/app/models/human-ss/vendedor';
-import { TipoIdentificacion } from '../../../../models/human-ss/tipoIdentificacion';
+import { VendedorService } from 'src/app/services/human-ss/vendedor/vendedor.service';
 import { TipoIdentificacionService } from 'src/app/services/human-ss/tipoIdentificacion/tipo_identificacion.service';
+import { TipoIdentificacion } from 'src/app/models/human-ss/tipoIdentificacion';
+import { Vendedor } from 'src/app/models/human-ss/vendedor';
 
 @Component({
-  selector: 'app-vendedor-update',
-  templateUrl: './vendedor-update.component.html',
-  styleUrls: ['./vendedor-update.component.css']
+  selector: 'app-vendedor-delete',
+  templateUrl: './vendedor-delete.component.html',
+  styleUrls: ['./vendedor-delete.component.css']
 })
-export class VendedorUpdateComponent implements OnInit {
-  
+export class VendedorDeleteComponent implements OnInit {
+
   tiposIdentificacion:TipoIdentificacion[]
 
   vendedor:Vendedor={
@@ -38,7 +38,7 @@ export class VendedorUpdateComponent implements OnInit {
   constructor(private router:Router, private service:VendedorService, private service2:TipoIdentificacionService ) { }
 
   ngOnInit() {
-    this.editar();
+    this.cargar();
     this.service2.getTiposIdentificacion()
     .subscribe(data=>{
       this.tiposIdentificacion=data;
@@ -46,23 +46,25 @@ export class VendedorUpdateComponent implements OnInit {
     })
   }
 
-  editar(){
+   cargar(){
     console.log(this.vendedor);
     let id_vendedor=localStorage.getItem("id_vendedor");
     console.log(id_vendedor);
       this.service.getVendedoresId(+id_vendedor)
       .subscribe(data=>{
         console.log(data);
-        data.usuario.user_pass="";
         this.vendedor=data;
       })
   }
 
-  actualizar(vendedor:Vendedor){
-    this.service.updateVendedor(vendedor)
+  eliminar(vendedor:Vendedor){
+    vendedor.per_activo=false;
+    vendedor.usuario.user_activo=false;
+    vendedor.vend_activo=false;
+    this.service.deleteVendedor(vendedor)
     .subscribe(data=>{
       this.vendedor=data;
-      alert("Se actualizó exitosamente");
+      alert("Se eliminó exitosamente");
       this.router.navigate(["vendedores/listar"]);
     })
   }

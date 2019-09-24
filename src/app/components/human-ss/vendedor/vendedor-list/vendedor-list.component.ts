@@ -33,4 +33,12 @@ export class VendedorListComponent implements OnInit {
 
   }
 
+  seleccionar(vendedor:Vendedor):void{
+    console.log(vendedor.id_persona);
+    localStorage.setItem("id_vendedor", String(vendedor.id_persona));
+    
+    this.router.navigate(["vendedores/eliminar"]);
+
+  }
+
 }
