@@ -16,6 +16,16 @@ import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor
 import { UnidadFormComponent } from './components/producto-ss/unidad/unidad-form/unidad-form.component';
 import { MarcaFormComponent } from './components/producto-ss/marca/marca-form/marca-form.component';
 import { LineaFormComponent } from './components/producto-ss/lineas/linea-form/linea-form.component';
+import { ProductoVisitaComponent } from './components/admin-ss/historial/producto-visita/producto-visita.component';
+import { ClienteVisitaComponent } from './components/admin-ss/historial/cliente-visita/cliente-visita.component';
+import { AdminVisitaComponent } from './components/admin-ss/historial/admin-visita/admin-visita.component';
+import { ClienteBloqueadoComponent } from './components/admin-ss/bloqueo/cliente-bloqueado/cliente-bloqueado.component';
+import { ComentarioBloqueadoComponent } from './components/admin-ss/bloqueo/comentario-bloqueado/comentario-bloqueado.component';
+import { VendedorBloqueadoComponent } from './components/admin-ss/bloqueo/vendedor-bloqueado/vendedor-bloqueado.component';
+import { ClienteComponent } from './components/human-ss/cliente/cliente/cliente.component';
+import { RecomendacionComponent } from './components/human-ss/cliente/recomendacion/recomendacion.component';
+import { ProductoComponent } from './components/producto-ss/producto/producto/producto.component';
+import { ComentarioComponent } from './components/producto-ss/producto/comentario/comentario.component';
 
 
 @NgModule({
@@ -31,6 +41,16 @@ import { LineaFormComponent } from './components/producto-ss/lineas/linea-form/l
     UnidadFormComponent,
     MarcaFormComponent,
     LineaFormComponent,
+    ProductoVisitaComponent,
+    ClienteVisitaComponent,
+    AdminVisitaComponent,
+    ClienteBloqueadoComponent,
+    ComentarioBloqueadoComponent,
+    VendedorBloqueadoComponent,
+    ClienteComponent,
+    RecomendacionComponent,
+    ProductoComponent,
+    ComentarioComponent,
 
     
 

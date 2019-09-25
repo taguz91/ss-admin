@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MarcaService } from 'src/app/services/producto-ss/marca/marca.service';
-import { Marca } from 'src/app/models/producto-ss/marca';
+import { Marca } from 'src/app/models/producto-ss/producto/marca';
 
 @Component({
   selector: 'app-marca-form',

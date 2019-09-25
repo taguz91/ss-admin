@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LineaFormComponent } from 'src/app/components/producto-ss/lineas/linea-form/linea-form.component';
-import { Linea } from 'src/app/models/producto-ss/linea';
+import { Linea } from 'src/app/models/producto-ss/producto/linea';
 
 @Injectable({
   providedIn: 'root'

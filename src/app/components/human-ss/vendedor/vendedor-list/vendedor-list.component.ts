@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Vendedor } from '../../../../models/human-ss/vendedor';
+import { Vendedor } from '../../../../models/human-ss/vendedor/vendedor';
 import { VendedorService } from '../../../../services/human-ss/vendedor/vendedor.service';
 import { Router } from '@angular/router';
 

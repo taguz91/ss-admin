@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VendedorService } from '../../../../services/human-ss/vendedor/vendedor.service';
-import { Vendedor } from 'src/app/models/human-ss/vendedor';
+import { Vendedor } from 'src/app/models/human-ss/vendedor/vendedor';
 
 @Component({
   selector: 'app-vendedor-update',
