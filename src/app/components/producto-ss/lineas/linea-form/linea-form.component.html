@@ -77,7 +77,7 @@
                         <th>{{ item.id_linea }}</th>
                         <td>{{ item.lin_nombre }}</td>
                         <td>{{ item.lin_codigo }}</td>
-                        <td> <button class="btn btn-primary">Editar</button> </td>
+                        <td> <button class="btn btn-primary" (click)="editarLinea(item)" >Editar</button> </td>
                         <td> <button class="btn btn-primary">Eliminar</button> </td>
                     </tr>
                 </tbody>

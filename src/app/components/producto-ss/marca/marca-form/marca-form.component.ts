@@ -15,6 +15,7 @@ export class MarcaFormComponent implements OnInit {
     marc_codigo: "",
     marc_activo: true
   }
+  mostrar = false;
 
   constructor( private marcaService:MarcaService ) { }
 
@@ -23,6 +24,7 @@ export class MarcaFormComponent implements OnInit {
     this.marcaService.getAllMarcas().subscribe(
       data => {
         this.marcas = data;
+        console.log(this.marcas);
       }
     );
 
@@ -32,9 +34,19 @@ export class MarcaFormComponent implements OnInit {
     console.log(this,this.marca);
     this.marcaService.saveMarca(this.marca).subscribe(
       data => {
+        // this.marcas.push(this.marca);
         alert("Se guardó correctamente");
+        this.marca.marc_nombre = "";
+        this.marca.marc_codigo = "";
       }
     );
+  }
+
+  editarMarca( marca:Marca ){
+    this.marca.id_marca = marca.id_marca;
+    this.marca.marc_nombre = marca.marc_nombre;
+    this.marca.marc_codigo = marca.marc_codigo;
+    this.mostrar = true;
   }
 
 }

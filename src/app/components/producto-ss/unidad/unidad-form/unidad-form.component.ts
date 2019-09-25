@@ -36,4 +36,12 @@ export class UnidadFormComponent implements OnInit {
     )
   }
 
+  editarUnidad( unidad:Unidad ){
+    console.log(this.unidad);
+    this.unidad.id_unidad = unidad.id_unidad;
+    this.unidad.unid_nombre = unidad.unid_nombre;
+    this.unidad.unid_codigo = unidad.unid_codigo;
+    this.mostrar = true;
+  }
+
 }

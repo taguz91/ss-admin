@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LineaService } from 'src/app/services/producto-ss/linea/linea.service';
 import { Linea } from 'src/app/models/producto-ss/linea';
 
@@ -16,6 +16,7 @@ export class LineaFormComponent implements OnInit {
     lin_codigo: null,
     lin_activo: true
   };
+  @Input() lineaInput:Linea;
 
   constructor( private lineaService: LineaService ) { 
 
@@ -38,8 +39,11 @@ export class LineaFormComponent implements OnInit {
     )
   }
 
-  editarLinea(){
-
+  editarLinea( linea:Linea ){
+    this.linea.id_linea = linea.id_linea;
+    this.linea.lin_nombre = linea.lin_nombre;
+    this.linea.lin_codigo = linea.lin_codigo;
+    this.mostrar = true;
   }
 
   eliminarLinea(){

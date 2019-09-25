@@ -48,7 +48,7 @@
                     <div class="col-md-9 offset-md-2 form-inline">
                         <input class="form-control mr-sm-2" type="search" placeholder="Ingrese aquí" aria-label="Search"
                             id="buscador">
-                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar marca</button>
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar línea</button>
                     </div>
                     <div class="col-md-3 offset-md-9">
     
@@ -71,10 +71,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
+                        <tr *ngFor="let item of marcas">
+                            <th> {{ item.id_marca }} </th>
+                            <td> {{ item.marc_nombre }} </td>
+                            <td> {{ item.marc_codigo }} </td>
+                            <td> <button class="btn btn-primary" (click)="editarMarca(item)" >Editar</button> </td>
+                            <td> <button class="btn btn-primary">Eliminar</button> </td>
                         </tr>
                     </tbody>
                 </table>
