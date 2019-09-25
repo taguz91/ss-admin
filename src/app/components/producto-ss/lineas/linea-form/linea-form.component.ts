@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LineaService } from 'src/app/services/producto-ss/linea/linea.service';
-import { Linea } from 'src/app/models/producto-ss/linea';
+import { Linea } from 'src/app/models/producto-ss/producto/linea';
 
 @Component({
   selector: 'app-linea-form',

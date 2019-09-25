@@ -1,5 +1,5 @@
-import { Persona } from './persona';
-import { Usuario } from './usuario';
+import { Persona } from '../persona/persona';
+import { Usuario } from '../persona/usuario';
 export interface Vendedor extends Usuario  {
 
 

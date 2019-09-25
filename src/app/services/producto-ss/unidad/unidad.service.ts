@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Unidad } from 'src/app/models/producto-ss/unidad';
+import { Unidad } from 'src/app/models/producto-ss/producto/unidad';
 
 @Injectable({
   providedIn: 'root'
