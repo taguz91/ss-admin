@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Vendedor } from '../../../models/human-ss/persona/vendedor';
+import { Vendedor } from '../../../models/human-ss/vendedor/vendedor';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
