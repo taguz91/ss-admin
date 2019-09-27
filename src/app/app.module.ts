@@ -12,9 +12,7 @@ import { AdminListComponent } from './components/admin-ss/admin/admin-list/admin
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { VendedorService } from './services/human-ss/vendedor/vendedor.service';
 import {HttpClientModule } from '@angular/common/http';
-import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor-update/vendedor-update.component';
 import { TipoIdentificacionService } from './services/human-ss/tipoIdentificacion/tipo_identificacion.service';
-import { VendedorDeleteComponent } from './components/human-ss/vendedor-delete/vendedor-delete.component';
 
 
 
@@ -27,8 +25,6 @@ import { VendedorDeleteComponent } from './components/human-ss/vendedor-delete/v
     AdminComponent,
     AdminFormComponent,
     AdminListComponent,
-    VendedorUpdateComponent,
-    VendedorDeleteComponent,
 
     
 
