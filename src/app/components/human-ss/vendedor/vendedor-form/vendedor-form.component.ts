@@ -108,21 +108,17 @@ export class VendedorFormComponent implements OnInit {
 
     enviar(vendedor:Vendedor){
 
-      if (vendedor){
+      if (vendedor.id_persona){
 
         if (window.history.state.delete){
           this.eliminar(vendedor);
-      }else{
-        
-        this.actualizar(vendedor);
-      }
+        }else{
+          
+          this.actualizar(vendedor);
+        }
       }else{
         this.guardar();
       }
-
-      
-
-      
     }
 
   guardar(){
