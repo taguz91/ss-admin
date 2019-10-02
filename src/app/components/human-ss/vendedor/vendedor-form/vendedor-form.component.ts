@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
-import { Vendedor } from 'src/app/models/human-ss/vendedor';
 import { Router } from '@angular/router';
 import { VendedorService } from 'src/app/services/human-ss/vendedor/vendedor.service';
 import { TipoIdentificacionService } from 'src/app/services/human-ss/tipoIdentificacion/tipo_identificacion.service';
 import { TipoIdentificacion } from 'src/app/models/human-ss/tipoIdentificacion';
+import { Vendedor } from 'src/app/models/human-ss/vendedor/vendedor';
 
 @Component({
   selector: 'app-vendedor-form',
@@ -20,7 +20,7 @@ export class VendedorFormComponent implements OnInit {
   
   tiposIdentificacion:TipoIdentificacion[];
 
-  vendedor:Vendedor={
+  vendedor: Vendedor={
     id_persona: 0,
 
     per_correo: '',

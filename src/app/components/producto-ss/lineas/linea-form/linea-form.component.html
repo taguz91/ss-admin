@@ -1,0 +1,89 @@
+<div class="container-fluid">
+    <div class="row m-4">
+        <div class="col-md-10 offset-md-1">
+
+            <div class="form-inline">
+                <h2 class="mr-sm-2">Ingreso de Línea</h2>  
+                <button (click)="mostrar = !mostrar" class="btn btn-outline-dark" id="mostrar">Mostrar Formulario</button>
+                
+            </div>
+            <hr>
+            
+            <form *ngIf="mostrar">
+
+                <div class="form-row">
+
+                    <div class="col-md-6 form-group">
+                        <label for="nombreUnidad">Nombre de Línea</label>
+                        <input [(ngModel)]="linea.lin_nombre" type="text" class="form-control" name="nombreUnidad" id="nombreUnidad">
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label for="codigoUnidad">Código de Línea</label>
+                        <input [(ngModel)]="linea.lin_codigo" type="text" class="form-control" name="codigoUnidad" id="codigoUnidad">
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="col-md-4 offset-md-5">
+                        <button (click)="guardarLinea()" type="submit" class="btn btn-dark">Guardar Línea</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="row m-4">
+        <div class="col-md-10 offset-md-1">
+
+            <h2>Lista de Líneas</h2>
+            <hr>
+
+            <form>
+                <div class="col-md-9 offset-md-2 form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Ingrese aquí" aria-label="Search"
+                        id="buscador">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar línea</button>
+                </div>
+                <div class="col-md-3 offset-md-9">
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <div class="row m-4">
+        <div class="col-md-10 offset-md-1">
+
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre de Línea</th>
+                        <th scope="col">Código de Línea</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of lineas">
+                        <th>{{ item.id_linea }}</th>
+                        <td>{{ item.lin_nombre }}</td>
+                        <td>{{ item.lin_codigo }}</td>
+                        <td> <button class="btn btn-primary" (click)="editarLinea(item)" >Editar</button> </td>
+                        <td> <button class="btn btn-primary">Eliminar</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
