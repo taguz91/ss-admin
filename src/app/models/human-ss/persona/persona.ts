@@ -1,14 +1,15 @@
-import { TipoIdentificacion } from './tipoIdentificacion';
 import { Usuario } from './usuario';
+import { TipoIdentificacion } from '../tipoIdentificacion';
+
 export abstract class Persona {
 
     id_persona:number;
 
     per_identificacion:string;
 
-    usuario:Usuario;
+    usuario: Usuario;
 
-    tipoIdentificacion:TipoIdentificacion;
+    tipoIdentificacion: TipoIdentificacion;
 
     per_primer_nombre:string;
 

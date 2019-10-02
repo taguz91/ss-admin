@@ -13,7 +13,6 @@ import { AdminFormComponent } from './components/admin-ss/admin/admin-form/admin
 import { AdminListComponent } from './components/admin-ss/admin/admin-list/admin-list.component';
 import { VendedorService } from './services/human-ss/vendedor/vendedor.service';
 import { TipoIdentificacionService } from './services/human-ss/tipoIdentificacion/tipo_identificacion.service';
-import { VendedorUpdateComponent } from './components/human-ss/vendedor/vendedor-update/vendedor-update.component';
 import { UnidadFormComponent } from './components/producto-ss/unidad/unidad-form/unidad-form.component';
 import { MarcaFormComponent } from './components/producto-ss/marca/marca-form/marca-form.component';
 import { LineaFormComponent } from './components/producto-ss/lineas/linea-form/linea-form.component';
@@ -38,7 +37,6 @@ import { ComentarioComponent } from './components/producto-ss/producto/comentari
     AdminComponent,
     AdminFormComponent,
     AdminListComponent,
-    VendedorUpdateComponent,
     UnidadFormComponent,
     MarcaFormComponent,
     LineaFormComponent,
