@@ -1,12 +1,9 @@
 import { Persona } from '../persona/persona';
-import { Usuario } from '../persona/usuario';
-export interface Vendedor extends Usuario  {
 
-
-   
+export interface Vendedor extends Persona  {
 
     vend_max_productos:number;
     
-    
+    vend_activo?:boolean;    
 
 }

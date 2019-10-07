@@ -15,12 +15,12 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let vendedor of vendedores" class="text-center">
-                            <td>{{vendedor.id_usuario}}</td>
-                            <td>{{vendedor.user_nick}}</td>
+                            <td>{{vendedor.usuario.id_usuario}}</td>
+                            <td>{{vendedor.usuario.user_nick}}</td>
                             <td>{{vendedor.vend_max_productos}}</td>
                             <td>
                                 <button (click)="editar(vendedor)" class="btn btn-primary">Actualizar</button>
-                                <button class="btn btn-danger">Eliminar</button>
+                                <button (click)="seleccionar(vendedor)" class="btn btn-danger">Eliminar</button>
                             </td>
                         </tr>
                     </tbody>

@@ -25,10 +25,18 @@ export class VendedorListComponent implements OnInit {
 
 
   editar(vendedor:Vendedor):void{
-    console.log(vendedor.id_usuario);
-    localStorage.setItem("id_vendedor", String(vendedor.id_usuario));
+    // console.log(vendedor.id_persona);
+    // localStorage.setItem("id_vendedor", String(vendedor.id_persona));
     
-    this.router.navigate(["vendedores/actualizar"]);
+    this.router.navigate(["vendedores/actualizar"],{ state: { id: vendedor.id_persona } });
+
+  }
+
+  seleccionar(vendedor:Vendedor):void{
+    // console.log(vendedor.id_persona);
+    // localStorage.setItem("id_vendedor", String(vendedor.id_persona));
+    
+    this.router.navigate(["vendedores/eliminar"],{ state: { id: vendedor.id_persona , delete:true } });
 
   }
 

@@ -1,8 +1,15 @@
-export interface Persona{
+import { Usuario } from './usuario';
+import { TipoIdentificacion } from '../tipoIdentificacion';
+
+export abstract class Persona {
 
     id_persona:number;
 
     per_identificacion:string;
+
+    usuario: Usuario;
+
+    tipoIdentificacion: TipoIdentificacion;
 
     per_primer_nombre:string;
 
@@ -17,6 +24,8 @@ export interface Persona{
     per_sexo:string;
 
     per_fecha_registro?:Date;
+
+    per_activo?:boolean;
 
 
 
