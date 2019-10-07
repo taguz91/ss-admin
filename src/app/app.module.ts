@@ -26,6 +26,7 @@ import { ClienteComponent } from './components/human-ss/cliente/cliente/cliente.
 import { RecomendacionComponent } from './components/human-ss/cliente/recomendacion/recomendacion.component';
 import { ProductoComponent } from './components/producto-ss/producto/producto/producto.component';
 import { ComentarioComponent } from './components/producto-ss/producto/comentario/comentario.component';
+import { ClienteListComponent } from './components/human-ss/cliente/cliente-list/cliente-list.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { ComentarioComponent } from './components/producto-ss/producto/comentari
     RecomendacionComponent,
     ProductoComponent,
     ComentarioComponent,
+    ClienteListComponent,
 
     
 
